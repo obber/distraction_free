@@ -16,7 +16,7 @@ DESTINATION="127.0.0.1"
 
 # counter for line removal
 COUNT=$(echo "$SITES_TO_DISABLE" | wc -l);
-((COUNT *= 2))
+((COUNT *= 4))
 
 # =======================
 # for "on"
@@ -28,14 +28,19 @@ if [ "$@" == "on" ]; then
     exit;
   fi
 
+  # IPv6 entry for ISPs that provide IPV6 support
+  IPV6="fe80::1%lo0"
+
   # add white space for clarity
-  echo "\n\n" >> /etc/hosts
+  echo "\n\n\n" >> /etc/hosts
 
   # add disable entries
   while read -r LINE; do
     if [[ -n $LINE ]]; then
       echo "$DESTINATION $LINE" >> /etc/hosts
       echo "$DESTINATION www.$LINE" >> /etc/hosts
+      echo "$IPV6 $LINE" >> /etc/hosts
+      echo "$IPV6 www.$LINE" >> /etc/hosts
     fi
   done <<< "$SITES_TO_DISABLE"
 
