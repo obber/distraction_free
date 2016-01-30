@@ -10,7 +10,7 @@ To install, download and place the distraction_free.sh script inside of a direct
 If you download the file elsewhere, adjust any file paths as needed for the instructions below.
 
 ## Customize Which Sites to Disable
-To customize, open distraction_free.sh in a text editor and replace facebook and youtube or append to the variable with whatever tickles your fancy.
+To customize, open distraction_free.sh in a text editor and replace facebook and youtube (lines 5 and 6) or append to the variable with whatever tickles your fancy.
 
 ## To Run
 To turn it on:
@@ -28,7 +28,7 @@ Set an alias in your .bash_profile by adding something like:
 
     alias dfree='sudo ~/scripts/distraction_free.sh'
 
-which will allow you to run this instead:
+which will allow you to run this instead (after restarting the terminal or sourcing .bash_profile):
 
     dfree on
 
