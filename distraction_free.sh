@@ -26,12 +26,14 @@ if [ "$@" == "on" ]; then
       echo "$DESTINATION www.$LINE" >> /etc/hosts
     fi
   done <<< "$SITES_TO_DISABLE"
+  echo "Distraction Free Mode: \033[1;32mEnabled\033[0m"
 elif [ "$@" == "off" ]; then
   # overwrite /etc/hosts, removing $COUNT number of lines.
   HEADCOUNT=$(wc -l < /etc/hosts)
   HEADCOUNT=$((HEADCOUNT - COUNT))
   NEW_HOSTS_FILE="$(head -n $HEADCOUNT /etc/hosts)"
   echo "$NEW_HOSTS_FILE" > /etc/hosts
+  echo "Distraction Free Mode: \033[1;31mDisabled\033[0m"
 else
   echo "Not a valid argument. Try 'on' or 'off'."
 fi
