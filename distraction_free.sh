@@ -49,6 +49,7 @@ if [ "$@" == "on" ]; then
 
   # output message
   echo "Distraction Free Mode: \033[1;32mEnabled\033[0m"
+  echo "You may need to restart your browser."
 
 # =======================
 # for "off"
