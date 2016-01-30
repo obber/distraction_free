@@ -26,11 +26,11 @@ To customize, open distraction_free.sh in a text editor and replace facebook.com
 ## To Run
 To turn it on:
 
-    ~/scripts/distraction_free.sh on  
+    sudo ~/scripts/distraction_free.sh on  
 
 To turn it off:
 
-    ~/scripts/distraction_free.sh off
+    sudo ~/scripts/distraction_free.sh off
 
 (The 'on/off' argument is required.)
 
