@@ -42,5 +42,6 @@ Set an alias in your .bash_profile by adding something like:
 which will allow you to run this instead (after restarting the terminal or sourcing .bash_profile):
 
     dfree on
+    dfree off
 
 Enjoy!
