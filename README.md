@@ -11,21 +11,22 @@ To customize the sites, open distraction_free.sh in a text editor and replace fa
 
 ## To Run
 To turn it on:
-~/scripts/distraction_free.sh on  
+
+    ~/scripts/distraction_free.sh on  
 
 To turn it off:
-~/scripts/distraction_free.sh off
+
+    ~/scripts/distraction_free.sh off
 
 (The 'on/off' argument is required.)
 
 ## Recommendations
 Set an alias in your .bash_profile by adding something like:
-'''
-alias dfree='sudo ~/scripts/distraction_free.sh'
-'''
-which will allow you to run:
-'''
-dfree on
-'''
+
+    alias dfree='sudo ~/scripts/distraction_free.sh'
+
+which will allow you to run this instead:
+
+    dfree on
 
 Enjoy!
