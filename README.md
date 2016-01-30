@@ -11,7 +11,7 @@ To install, download and place the distraction_free.sh script inside of a direct
     curl -O "https://raw.githubusercontent.com/obber/distraction_free/master/distraction_free.sh"
     chmod 755 distraction_free.sh  
 
-If you download the file elsewhere, adjust any file paths as needed for the instructions below.
+(If you download the file into a different directory, adjust file paths as needed for the instructions below.)
 
 ## Customize Which Sites to Disable
 To customize, open distraction_free.sh in a text editor and replace facebook.com and youtube.com (lines 5 and 6) or append to the variable with whatever tickles your fancy.

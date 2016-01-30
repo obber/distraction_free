@@ -27,10 +27,8 @@ if [ "$@" == "on" ]; then
     exit;
   fi
 
-  # add white space + #DF_BEGIN
+  # add #DF_BEGIN, Entries, and #DF_END
   echo "\n\n#DF_BEGIN" >> /etc/hosts
-
-  # add disable entries
   while read -r LINE; do
     if [[ -n $LINE ]]; then
       echo "$DESTINATION $LINE" >> /etc/hosts
@@ -39,11 +37,9 @@ if [ "$@" == "on" ]; then
       echo "$IPV6_DESTINATION www.$LINE" >> /etc/hosts
     fi
   done <<< "$SITES_TO_DISABLE"
-
-  # add "#DF_END" line
   echo "#DF_END" >> /etc/hosts
 
-  # output message
+  # Output message
   echo "Distraction Free Mode: \033[1;32mEnabled\033[0m"
   echo "You may need to restart your browser."
 
@@ -57,10 +53,8 @@ elif [ "$@" == "off" ]; then
     exit;
   fi
 
-  # overwrite /etc/hosts, removing $COUNT number of lines.
+  # overwrite /etc/hosts & output message
   echo "$(sed '/\#DF_BEGIN/,/\#DF_END/d' /etc/hosts)" > /etc/hosts
-
-  # output message
   echo "Distraction Free Mode: \033[1;31mDisabled\033[0m"
 else
   # error out
