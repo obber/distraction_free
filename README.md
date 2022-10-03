@@ -1,4 +1,4 @@
-# Distraction_Free
+# Distraction Free
 Stay focused on the task at hand.
 
 Turn on/off access to distracting sites with a single command in your terminal. (Linux &amp; OS X)
